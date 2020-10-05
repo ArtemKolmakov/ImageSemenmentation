@@ -1,2 +1,2 @@
 # ImageSemenmentation
-instance segmentation
+Multiclass segmentation
