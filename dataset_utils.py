@@ -48,6 +48,9 @@ def get_validation_augmentation():
     test_transform = [albu.PadIfNeeded(384, 480)]
     return albu.Compose(test_transform)
 
+def to_tensor(x, **kwargs):
+    return x.transpose(2, 0, 1).astype('float32')
+
 def get_preprocessing(preprocessing_func):
     """Construct preprocessing transform
     :param preprocessing_func: callbale, data normalization function 
